@@ -3,3 +3,7 @@
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui animi similique blanditiis dolore voluptates pariatur, quidem doloremque architecto esse quis consectetur vitae nulla quos laudantium harum modi nihil tempore recusandae.</p>
 
 <%= link_to 'Go to page 2 >', page2_path %>
+
+<%= form_with url: page3_path do |form| %>
+    <%= form.submit 'Submit form', class: 'p-2 mt-5 bg-gray-300' %>
+<% end %>
