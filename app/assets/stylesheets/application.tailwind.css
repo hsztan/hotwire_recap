@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  h1 {
+    @apply text-2xl font-bold pb-5
+  }
+
+  p {
+    @apply pb-3;
+  }
+
+  a {
+    @apply text-blue-700;
   }
 }
-
-*/
