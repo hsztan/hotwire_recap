@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
      @programming_language = ProgrammingLanguage.new(programming_language_params)
 
      @programming_language.save!
+
+     @counter = ProgrammingLanguage.count
   end
 
   private
