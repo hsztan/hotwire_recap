@@ -1,5 +1,9 @@
 <h1>Programming Languages</h1>
 
+<%= turbo_stream_from :stream_test %>
+
+<div id="message"></div>
+
 <h2 class="text-ls py-3">Total: <span class="counter"><%= ProgrammingLanguage.count %></span></h2>
 
 <table>
