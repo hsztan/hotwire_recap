@@ -10,12 +10,13 @@ class ApplicationController < ActionController::Base
   def page4; end
 
   def programming_languages
-    @programming_languages = ProgrammingLanguage.all.reverse_order
-    @programming_language = ProgrammingLanguage.new
+    @programming_languages =  ProgrammingLanguage.all.reverse_order
+    @programming_language =   ProgrammingLanguage.new
   end
 
   def create_programming_language
      @programming_language = ProgrammingLanguage.new(programming_language_params)
+
      @programming_language.save!
   end
 
