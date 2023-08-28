@@ -15,11 +15,11 @@ class ApplicationController < ActionController::Base
   end
 
   def create_programming_language
-     @programming_language = ProgrammingLanguage.new(programming_language_params)
+     @programming_languagecito = ProgrammingLanguage.new(programming_language_params)
 
-     @programming_language.save!
+     @programming_languagecito.save!
 
-     @counter = ProgrammingLanguage.count
+     @programming_languagecito.broadcast_render_to :stream_test, partial: 'application/create_programming_language', locals: { counter: ProgrammingLanguage.count }
   end
 
   private
