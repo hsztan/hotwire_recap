@@ -1,19 +1,14 @@
 <h1>Page 1</h1>
 
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui animi similique blanditiis dolore voluptates pariatur, quidem doloremque architecto esse quis consectetur vitae nulla quos laudantium harum modi nihil tempore recusandae.</p>
+<div data-controller="colors">
+  <input type="text" 
+         autocomplete="off"
+         placeholder="Type an HTML color"
+         data-colors-target="input">
 
-<%= link_to 'Go to page 2 >', page2_path %>
+  <button class="bg-gray-200 border border-gray-500 rounded p-2"
+          data-action="colors#colorizeCard">Color it!</button>
 
-<%= form_with url: page3_path do |form| %>
-  <%= form.submit 'Submit form', class: 'p-2 mt-5 bg-gray-300' %>
-<% end %>
-
-<%= turbo_frame_tag 'page4-image-link', class: 'block bg-green-100 mt-10 p-5' do %>
-  <%= link_to 'Load image', page4_path, data: { turbo_frame: 'page4-image-response' } %>
-<% end %>
-
-<%= turbo_frame_tag 'page4-text', class: 'block bg-blue-100 mt-10 p-5' do %>
-  <%= link_to 'Load text', page4_path %>
-<% end %>
-
-<%= turbo_frame_tag 'page4-image-response', src: page4_path, loading: 'lazy', class: 'block bg-yellow-100 mt-10 p-5' %>
+  <div class="border border-black w-32 h-32 rounded mt-5"
+       data-colors-target="card"></div>
+</div>
